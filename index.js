@@ -55,8 +55,13 @@ Do the following:
 
    HINT: look up the Number method
 */
-let word = "1999";
-
+let b;
+let a = "1999";
+function convertToInt(num) {
+  b = parseInt(a);
+  return b;
+}
+console.log(b);
 
 
 
@@ -69,8 +74,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a * b;
 }
 
 
@@ -84,11 +89,12 @@ Do the following:
  2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
  3. Return the newly calculated age
 */
-
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+let humanYears;
+function dogYears(dogYear){
+  humanYears = dogYear * 7;
+  return humanYears;
 }
-
+dogYears(5);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -117,9 +123,41 @@ Puppies less than 1 year
   
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
-
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+let foodAmount;
+function hungryDog(age, weight){
+  if (age < 1) {
+    if (age > 7 / 12) {
+      foodAmount = weight * 0.04;
+      return foodAmount;
+    } 
+    else if (age > 4 /12) {
+      foodAmount = weight * 0.05;
+      return foodAmount;
+    }
+    else {
+      foodAmount = weight * 0.1;
+      return foodAmount;
+    }
+  }  
+  else {
+    if (weight > 15) {
+      foodAmount = weight * 0.02;
+      return foodAmount;
+    }
+    else if (weight >= 11 && weight < 15) {
+      foodAmount = weight * 0.03;
+      return foodAmount;
+    }
+    else if (weight >= 6 && weight < 11) {
+      foodAmount = weight * 0.04;
+      return foodAmount;
+    }
+    else if (weight < 5) {
+      foodAmount = weight * 0.05;
+      return foodAmount;
+    }
+    else {console.log("Please enter proper weight and age")}
+  }
 }
 
 
