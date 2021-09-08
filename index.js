@@ -19,6 +19,10 @@ Do the following:
 
    HINT: no function required
 */
+let votingAge = 29;
+if (votingAge >= 18) {
+  console.log(true);
+}
 
 
 
@@ -33,7 +37,12 @@ Do the following:
    HINT: no function required
 */
 
-
+let a = 20;
+let b = 10;
+if (a > b) {
+  b = b + 2;
+  console.log(a);
+}
 
 
 
@@ -60,8 +69,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply( a, b){
+  return a * b;
 }
 
 
@@ -76,11 +85,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7
 }
 
-
+dogYears(5);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -135,11 +144,23 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
+let compChoice = Math.random() * 3;
+let userChoice = Math.random() * 3;
 function game(user, computer){
-  /*add your code here*/
+  if (user === computer) {
+    return "it's a tie";
+  }
+  else if (user === "scissors" && computer === "rock" || user === "rock" && computer === "paper" || user === "paper" && computer === "scissors") {
+    return "you lose";
+    console.log("you lose")
+  }
+  else {
+    return "you win";
+    console.log("you win");
+  }
 }
-
+game(userChoice, compChoice);
+game(2, compChoice);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
